@@ -4,8 +4,7 @@
 - Commit: `202b7a2` (tarball snapshot, 2026-10-20)
 - License: MIT (see `LICENSE`)
 - Purpose: the bridge subset used by `fl-melody` — MIDI connection, serialized
-  command/response files, the FL controller, and the Piano Roll pyscript. The
-  original 57-tool server is archived under `archive/fl-v0-full/`.
+  command/response files, the FL controller, and the Piano Roll pyscript.
 
 ## Local changes
 
@@ -20,8 +19,7 @@
 3. `fl_controller/device_FLStudioMCP.py`
    - Added `app.getContext` (focused caption, pattern, tempo, meter) so the
      melody writer can refuse a wrong target.
-   - The original tool handlers remain in this file; the archived 57-tool
-     server is not needed to use them.
+   - The original tool handlers remain in this file.
 4. `src/fl_studio_mcp/utils/fl_trigger.py`
    - Activate FL by bundle id (`com.image-line.flstudio`) instead of the
      hardcoded name `FL Studio`; current installs are `FL Studio 2026`.
@@ -32,8 +30,8 @@
    - Return False when the AppleScript exits non-zero instead of always
      claiming success.
 5. `pyproject.toml`
-   - Removed the 57-tool server entry point and `fastmcp` dependency.
+   - Removed the unused MCP server entry point and `fastmcp` dependency.
    - Added `pyobjc-framework-Quartz` on macOS for the focus/background key.
 
-Feature work belongs in `packages/fl-melody` or the archived `fl-core`, not in
-this vendored bridge subset.
+Feature work belongs in `packages/fl-melody`, not in this vendored bridge
+subset.

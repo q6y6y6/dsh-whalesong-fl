@@ -36,11 +36,6 @@ the reference style, and writes the notes into the focused FL Studio Piano Roll.
 - **Three tools only** — `melody_context`, `melody_write`, `melody_restore`
   (≈1.4 KB of schemas).
 
-![Piano Wide melody written by WhaleSong](assets/piano-wide.jpg)
-
-<sub>A draft in the `Piano Wide` channel: 24 notes, C#4–C#5,
-A–G#m–G–F#m–E descent. No mixing, plugins, Playlist, or render.</sub>
-
 ## Requirements
 
 | | |
@@ -79,7 +74,6 @@ bundle with absolute paths for this checkout.
    `FLStudioMCP` in MIDI Settings so FL loads the new script. This also enables
    the controller's `app.getContext` (caption, pattern, tempo, meter).
 
-
 ## DSH setup
 
 `packages/dsh-bundle/cordis.patch.yml` adds the MCP server:
@@ -108,14 +102,14 @@ is absent (it backs up the profile first). The tools appear as
 
 Open the target channel's Piano Roll, then ask in DSH:
 
-> I created a **Piano Wide** channel. Write an 8-bar melody in it, in the style
-> of XXX.
+> I created a **Piano** channel. Write an 8-bar melody in it, in the style
+> of a slow 6/8 pop ballad.
 
 What happens:
 
-1. `melody_context("Piano Wide")` checks the target, current notes, pattern,
+1. `melody_context("Piano")` checks the target, current notes, pattern,
    tempo, and meter.
-2. DSH composes in the reference style. For XXX: E major, 6/8,
+2. DSH composes in the reference style. For that style: E major, 6/8,
    63 dotted-quarter BPM, `beats_per_bar=3`.
 3. `melody_write` backs up the Piano Roll, writes all notes in one call, and
    verifies the note-count delta.
@@ -125,7 +119,7 @@ What happens:
 You can also smoke-test the bridge:
 
 ```bash
-.venv/bin/python scripts/melody_smoke.py --channel "Piano Wide"
+.venv/bin/python scripts/melody_smoke.py --channel "Piano"
 ```
 
 ## Tools
@@ -190,16 +184,15 @@ packages/fl-v0/       MIDI + Piano Roll bridge (controller, pyscript, utils)
 packages/dsh-bundle/  DSH profile patch, icon, locale
 .dsh/skills/          fl-melody workflow and style guidance
 scripts/              setup, deploy_controller, doctor, melody_smoke, OCR helper
-docs/                 architecture and v0 scope/evidence
-assets/               banner and demo image
-archive/              deferred kernels and old docs (gitignored)
+docs/                 design, scope, and notes
+assets/               banner
 ```
 
 ## Credits
 
 The FL-side bridge is based on
 [karl-andres/fl-studio-mcp](https://github.com/karl-andres/fl-studio-mcp)
-(MIT). 
+(MIT).
 
 ## License
 

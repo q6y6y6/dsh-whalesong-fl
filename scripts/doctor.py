@@ -221,7 +221,7 @@ def check_profile(rep: Report) -> None:
     elif "fl_studio_mcp.server" in text:
         rep.warn(
             "dsh-profile-surface",
-            "profile points at the archived 57-tool server",
+            "profile points at the legacy full-control server",
             "Use fl_melody.server for the v0 surface.",
         )
     else:

@@ -1,4 +1,4 @@
-# Architecture — WhaleSong v0
+# Design — WhaleSong v0
 
 ```text
 DSH (desktop/web)
@@ -42,16 +42,14 @@ kept. No automatic retry.
 
 ## Why three tools
 
-The full karl surface is 57 tools / ~24 KB of schemas. The melody workflow only
-needs context, write, and restore. Keeping the surface at three tools:
+A general DAW control surface exposes dozens of tools and tens of kilobytes of
+schemas. This workflow only needs context, write, and restore. Keeping the
+surface at three tools:
 
 - reduces resident schema to ~1.4 KB;
 - keeps the model focused on one task;
 - avoids exposing mixing, plugin, Playlist, and render operations that v0 does
   not support well.
-
-The 57-tool server, the PostFader fork, and the 12-tool façade are archived
-under `archive/`.
 
 ## Boundary
 

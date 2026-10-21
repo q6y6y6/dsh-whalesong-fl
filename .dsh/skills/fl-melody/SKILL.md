@@ -29,9 +29,10 @@ caption and refuses a mismatch; never guess or try to force focus.
    - Prefer values the user gave.
    - Otherwise use `context.tempo`, `context.beats_per_bar`, and
      `context.pattern_name` when available.
-   - If the user names a reference song, use its key/meter/tempo as the default
-     and say so. For JVKE "golden hour": E major, **6/8**, 63 dotted-quarter
-     BPM (about 94.5 quarter-note BPM). Pass `beats_per_bar=3` to the tool.
+   - If the user names a reference, use its key/meter/tempo when known and say
+     so. For a slow 6/8 pop ballad reference: E major, **6/8**, 63
+     dotted-quarter BPM (about 94.5 quarter-note BPM). Pass
+     `beats_per_bar=3` to the tool.
    - Default to 8 bars. Ask at most one short question if key/meter is genuinely
      required and cannot be inferred.
 4. Check `notes` in the context. If the Piano Roll already has notes, default to
@@ -68,25 +69,21 @@ caption and refuses a mismatch; never guess or try to force focus.
 - Humanize velocity around 0.5–0.75; accent the phrase peak, soften pickups.
 - End on a stable chord tone (root or fifth) with a longer note.
 
-## Style card: JVKE "golden hour"
+## Style card: slow 6/8 pop ballad
 
-Verified against Hooktheory's TheoryTab (key E, meter 6, tempo 63, chorus
-melody range C#4–B4, 1.23 beats/note, 83% chord tones, 99% diatonic):
+Reference characteristics used in testing:
 
 - **Key**: E major. **Meter**: 6/8. **Tempo**: 63 dotted-quarter BPM
   (about 94.5 quarter-note BPM). In FL, pass `beats_per_bar=3`.
-- **Harmony, verse/pre-chorus**: A9(add13) – G#m7(add11) – G+7(b9#11) –
-  F#m7(add11) – E9. The signature is the chromatic descending line
-  A–G#–G–F#–E; the G natural is not a mistake.
-- **Harmony, chorus**: A9(add13) – Am9(add13) – E9 – V9/IV (A – Am – E – E/B).
-  The borrowed Am (C natural) is the emotional turn.
-- **Melody**: vocal, slow, and narrow. Mostly stepwise, 83% chord tones,
-  loose syncopation, about 1.2 beats per note. Chorus range C#4–B4; lift to
-  C#5/D#5 only at the peak. Long notes and rests, not a continuous arpeggio.
+- **Harmony**: a chromatic descending bass in the verse; a borrowed minor iv
+  in the chorus.
+- **Melody**: vocal, slow, and narrow. Mostly stepwise, about 1.2 beats per
+  note, loose syncopation. Range C#4–B4; lift to C#5/D#5 only at the peak.
+  Long notes and rests, not a continuous arpeggio.
 - **Piano**: 6/8 broken chords with wide voicing and pedal; the vocal line
   floats above. A melody-only write should imply this space through rhythm.
-- **Do not**: use D-major 4/4 I–V–vi–IV, busy 8th/16th arpeggios, or wide
-  D4–D6 leaps. Those produce a generic pop-piano sketch, not this song.
+- **Do not**: use generic 4/4 I–V–vi–IV, busy 8th/16th arpeggios, or wide
+  D4–D6 leaps. Those produce a generic pop-piano sketch, not this style.
 
 ## Failure handling
 
@@ -101,5 +98,5 @@ melody range C#4–B4, 1.23 beats/note, 83% chord tones, 99% diatonic):
 ## Do not
 
 - Do not mix, change plugins, arrange Playlist clips, render, or analyze audio.
-- Do not call the archived full surface; it is not registered in this profile.
+- Do not call the full control surface; it is not registered in this profile.
 - Do not audition by default.

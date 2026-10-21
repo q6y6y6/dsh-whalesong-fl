@@ -118,9 +118,9 @@ def main() -> int:
         install_profile(args.dry_run)
     print()
     print("Next steps:")
-    print("  1. Open FL Studio on the disposable 'test project'.")
+    print("  1. Open FL Studio on a disposable project.")
     print("  2. Run: .venv/bin/python scripts/doctor.py --live")
-    print('  3. Run: .venv/bin/python scripts/melody_smoke.py --channel "Piano Wide"')
+    print('  3. Run: .venv/bin/python scripts/melody_smoke.py --channel "Piano"')
     print("  4. In DSH, install packages/dsh-bundle or apply its patch, then")
     print("     restart/reload if the mcp__fl__* tools are not visible.")
     return 0

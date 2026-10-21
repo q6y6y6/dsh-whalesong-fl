@@ -33,11 +33,6 @@ FL Studio 钢琴卷帘。
 - **只有三个工具**——`melody_context`、`melody_write`、`melody_restore`
   （schema 约 1.4 KB）。
 
-![WhaleSong 写入的 Piano Wide 旋律](assets/piano-wide.jpg)
-
-<sub>草稿：`Piano Wide` 通道，24 个音符，C#4–C#5，
-A–G#m–G–F#m–E 半音下行。没有混音、插件、Playlist 或渲染。</sub>
-
 ## 环境要求
 
 | | |
@@ -75,7 +70,6 @@ uv venv .venv --python 3.12
    `FLStudioMCP`，让 FL 加载新脚本；这也会启用控制器的 `app.getContext`
    （标题、pattern、tempo、拍号）。
 
-
 ## DSH 设置
 
 `packages/dsh-bundle/cordis.patch.yml` 会插入 MCP server：
@@ -103,22 +97,21 @@ profile）。工具会以 `mcp__fl__melody_context`、`mcp__fl__melody_write`、
 
 先打开目标通道的 Piano Roll，然后在 DSH 里说：
 
-> 我创建了一个 **Piano Wide** 通道，请为我在其中写一个 8 小节的旋律，
-> 风格类似XXX。
+> 我创建了一个 **Piano** 通道，请为我在其中写一个 8 小节的旋律，
+> 风格类似一首慢速 6/8 流行钢琴曲。
 
 执行过程：
 
-1. `melody_context("Piano Wide")` 检查目标、已有音符、pattern、tempo 和拍号。
-2. DSH 按参考风格生成旋律。以XXX为例：E 大调、6/8、
+1. `melody_context("Piano")` 检查目标、已有音符、pattern、tempo 和拍号。
+2. DSH 按参考风格生成旋律。以这种风格为例：E 大调、6/8、
    63 dotted-quarter BPM，调用时传 `beats_per_bar=3`。
 3. `melody_write` 先备份，再一次写入全部音符，并校验音符数变化。
 4. 回报通道、pattern、小节数、音符数、音域和 `backup_id`。
 
-
 也可以直接跑桥接烟雾测试：
 
 ```bash
-.venv/bin/python scripts/melody_smoke.py --channel "Piano Wide"
+.venv/bin/python scripts/melody_smoke.py --channel "Piano"
 ```
 
 ## 工具
@@ -182,9 +175,8 @@ packages/fl-v0/       MIDI + 钢琴卷帘桥接（控制器、pyscript、utils�
 packages/dsh-bundle/  DSH profile 补丁、icon、locale
 .dsh/skills/          fl-melody 工作流与风格指导
 scripts/              setup、deploy_controller、doctor、melody_smoke、OCR 辅助
-docs/                 架构与 v0 范围/验证记录
-assets/               banner 与演示图
-archive/              暂缓的内核和旧文档（gitignored）
+docs/                 设计、范围与说明
+assets/               banner
 ```
 
 ## 致谢

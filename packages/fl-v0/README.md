@@ -10,8 +10,6 @@ It contains only what the melody writer needs:
 - `src/fl_studio_mcp/utils/` — MIDI connection, serialized command file, and
   the background/foreground Piano Roll trigger.
 
-The original 57-tool MCP server, its tool modules, and its installers are in
-`archive/fl-v0-full/` at the repository root. They are not part of the v0
-melody surface.
+This package contains only the bridge subset.
 
 Local changes to the upstream bridge are listed in `VENDORED.md`.
