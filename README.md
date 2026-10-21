@@ -38,7 +38,7 @@ the reference style, and writes the notes into the focused FL Studio Piano Roll.
 
 ![Piano Wide melody written by WhaleSong](assets/piano-wide.jpg)
 
-<sub>A corrected 6/8 draft in the `Piano Wide` channel: 24 notes, C#4–C#5,
+<sub>A draft in the `Piano Wide` channel: 24 notes, C#4–C#5,
 A–G#m–G–F#m–E descent. No mixing, plugins, Playlist, or render.</sub>
 
 ## Requirements
@@ -79,7 +79,6 @@ bundle with absolute paths for this checkout.
    `FLStudioMCP` in MIDI Settings so FL loads the new script. This also enables
    the controller's `app.getContext` (caption, pattern, tempo, meter).
 
-> Use a disposable project for experiments. The repo's tests use `test project`.
 
 ## DSH setup
 
@@ -110,18 +109,18 @@ is absent (it backs up the profile first). The tools appear as
 Open the target channel's Piano Roll, then ask in DSH:
 
 > I created a **Piano Wide** channel. Write an 8-bar melody in it, in the style
-> of JVKE's “golden hour”.
+> of XXX.
 
 What happens:
 
 1. `melody_context("Piano Wide")` checks the target, current notes, pattern,
    tempo, and meter.
-2. DSH composes in the reference style. For *golden hour*: E major, 6/8,
+2. DSH composes in the reference style. For XXX: E major, 6/8,
    63 dotted-quarter BPM, `beats_per_bar=3`.
 3. `melody_write` backs up the Piano Roll, writes all notes in one call, and
    verifies the note-count delta.
 4. DSH reports the channel, pattern, bars, note count, pitch range, and
-   `backup_id`. No audition, mixing, plugins, Playlist, or render.
+   `backup_id`.
 
 You can also smoke-test the bridge:
 
@@ -200,8 +199,7 @@ archive/              deferred kernels and old docs (gitignored)
 
 The FL-side bridge is based on
 [karl-andres/fl-studio-mcp](https://github.com/karl-andres/fl-studio-mcp)
-(MIT). The PostFader fork, the 57-tool server, and the mixing/Playlist work are
-archived under `archive/` and are not part of v0.
+(MIT). 
 
 ## License
 

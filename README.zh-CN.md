@@ -35,7 +35,7 @@ FL Studio 钢琴卷帘。
 
 ![WhaleSong 写入的 Piano Wide 旋律](assets/piano-wide.jpg)
 
-<sub>修正后的 6/8 草稿：`Piano Wide` 通道，24 个音符，C#4–C#5，
+<sub>草稿：`Piano Wide` 通道，24 个音符，C#4–C#5，
 A–G#m–G–F#m–E 半音下行。没有混音、插件、Playlist 或渲染。</sub>
 
 ## 环境要求
@@ -75,7 +75,6 @@ uv venv .venv --python 3.12
    `FLStudioMCP`，让 FL 加载新脚本；这也会启用控制器的 `app.getContext`
    （标题、pattern、tempo、拍号）。
 
-> 建议使用可丢弃的工程做实验。仓库里的测试使用 `test project`。
 
 ## DSH 设置
 
@@ -105,16 +104,16 @@ profile）。工具会以 `mcp__fl__melody_context`、`mcp__fl__melody_write`、
 先打开目标通道的 Piano Roll，然后在 DSH 里说：
 
 > 我创建了一个 **Piano Wide** 通道，请为我在其中写一个 8 小节的旋律，
-> 风格类似 JVKE 的《golden hour》。
+> 风格类似XXX。
 
 执行过程：
 
 1. `melody_context("Piano Wide")` 检查目标、已有音符、pattern、tempo 和拍号。
-2. DSH 按参考风格生成旋律。以《golden hour》为例：E 大调、6/8、
+2. DSH 按参考风格生成旋律。以XXX为例：E 大调、6/8、
    63 dotted-quarter BPM，调用时传 `beats_per_bar=3`。
 3. `melody_write` 先备份，再一次写入全部音符，并校验音符数变化。
 4. 回报通道、pattern、小节数、音符数、音域和 `backup_id`。
-   不试听、不混音、不加载插件、不碰 Playlist、不渲染。
+
 
 也可以直接跑桥接烟雾测试：
 
@@ -191,8 +190,7 @@ archive/              暂缓的内核和旧文档（gitignored）
 ## 致谢
 
 FL 侧桥接基于 [karl-andres/fl-studio-mcp](https://github.com/karl-andres/fl-studio-mcp)
-（MIT）。PostFader fork、57 工具 server 以及混音/Playlist 相关工作都归档在
-`archive/`，不属于 v0。
+（MIT）。
 
 ## 许可证
 
