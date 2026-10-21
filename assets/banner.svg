@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="DSH WhaleSong for FL Studio">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.55" stop-color="#111c31"/>
+      <stop offset="1" stop-color="#1b2436"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.55" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <circle cx="150" cy="150" r="150" fill="url(#glow)"/>
+  <circle cx="1040" cy="80" r="120" fill="url(#glow)" opacity="0.5"/>
+
+  <!-- abstract whale tail + wave -->
+  <g transform="translate(78 88)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 86c34-6 58-28 72-62 6 26 4 48-6 66 20-12 34-30 42-52 8 40-6 78-42 100-26 16-56 12-78-4" fill="#0e7490" stroke="#22d3ee" stroke-width="3"/>
+    <path d="M16 110c18-2 34-10 48-24" stroke="#f59e0b" stroke-width="3"/>
+    <circle cx="36" cy="82" r="3.5" fill="#f8fafc" stroke="none"/>
+  </g>
+
+  <!-- waveform -->
+  <g transform="translate(78 250)" stroke="url(#wave)" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M0 0h46l10-18 12 36 12-50 14 64 12-40 10 24 12-12h54l10-16 12 30 12-44 14 58 12-34 10 20 12-10h80"/>
+  </g>
+
+  <text x="238" y="142" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="58" font-weight="700" fill="#f8fafc" letter-spacing="-1">DSH WhaleSong</text>
+  <text x="242" y="188" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="600" fill="#f59e0b" letter-spacing="4">FOR FL STUDIO</text>
+  <text x="242" y="228" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" fill="#94a3b8">Natural-language melodies, written into the Piano Roll.</text>
+</svg>

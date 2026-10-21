@@ -1,0 +1,14 @@
+.venv/
+.uvcache/
+.cache/
+archive/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+backups/
+packages/fl-v0/.venv/
+packages/fl-v0/__pycache__/
+packages/fl-v0/**/__pycache__/
+*.log
+.DS_Store

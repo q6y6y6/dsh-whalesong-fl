@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DSH WhaleSong">
+  <rect width="64" height="64" rx="14" fill="#0b1220"/>
+  <path d="M14 38c0-10 8-18 19-18 3 0 6 1 8 2l6-7c2 7 1 13-2 18 3-2 5-5 6-9 2 10-3 20-14 24-9 3-19 0-23-10z" fill="#0e7490" stroke="#22d3ee" stroke-width="2"/>
+  <circle cx="30" cy="30" r="2" fill="#f8fafc"/>
+  <path d="M13 50h11l4-7 4 12 4-16 5 20 4-12 4 7h12" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

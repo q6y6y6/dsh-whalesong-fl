@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fl-melody"
+version = "0.1.0"
+description = "DSH WhaleSong for FL Studio — three-tool melody writer"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.0",
+]
+
+[project.scripts]
+fl-melody = "fl_melody.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fl_melody"]
