@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="DSH WhaleSong for FL Studio" width="100%">
+  <img src="assets/banner.png" alt="DSH WhaleSong for FL Studio" width="100%">
 </p>
 
 <p align="center">
@@ -176,7 +176,7 @@ packages/dsh-bundle/  DSH profile 补丁、icon、locale
 .dsh/skills/          fl-melody 工作流与风格指导
 scripts/              setup、deploy_controller、doctor、melody_smoke、OCR 辅助
 docs/                 设计、范围与说明
-assets/               banner
+assets/               banner 与 icon
 ```
 
 ## 致谢
